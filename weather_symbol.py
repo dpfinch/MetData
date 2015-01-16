@@ -1,8 +1,10 @@
+#!/usr/bin/env python
+
 # MetData - 16/01/15 - Ben
 # Read in weather type, and assign a colour marker for plotting
 # Potentially still very buggy, will find out when plotting?
 
-def weather_symbol(integer):
+def w_s(integer):
 
 	# Setup empty vector for color and marker information
 	color_marker=''
@@ -72,6 +74,6 @@ def weather_symbol(integer):
 	# Fill vector of colour and marker information for weather type
 	color_marker=(color,marker)
 	# Send weather symbol information to plotting script
-	return color_marker
+	return(color_marker)
 
 
