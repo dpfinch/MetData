@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 
 # MetData - 16/01/15 - Ben
-# Read in weather type, and assign a colour marker for plotting
-# Potentially still very buggy, will find out when plotting?
+# Read in weather type ID, and assign a coloured marker for plotting.
+# The function w_s outputs 3 strings, a colour, a marker, and the weather condition
 
 def w_s(integer):
+	"""
+	Reads in weather ID, and outputs a colour, marker, and weather name.
+	"""
 
 	# Setup empty vector for color and marker information
 	output=''
