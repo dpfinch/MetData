@@ -1,9 +1,9 @@
 Name           Lat          Lon   
 
-Leeds        53.47          -1.32
-Edinburgh    55.57	    -3.11
-London       51.30           0.0
-Bristol      51.27          -2.35
+Leeds        53.79          -1.54
+Edinburgh    55.95	    -3.19
+London       51.50           0.0
+Bristol      51.45          -2.58
 Glasgow      55.85          -4.25
 Cardiff      51.48          -3.18
 Manchester   53.46          -2.23
