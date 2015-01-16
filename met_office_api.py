@@ -11,7 +11,7 @@ def forecast_daily(loc):
     '''
     This function pulls down data from the Met Office Datapoints website for daily forecasts. It uses
     an API key and the json function to get the data into a Python Dictionary. The returned data from this
-    function will be an array of Met variables (temp etc) by 40 forecasts (8 forecasts per day, 5 days).
+    function will be an array of Met variables (temp etc) by 32 forecasts (8 forecasts per day, 4  days).
     '''
     ## Set the Datapoints web address:
     url='http://datapoint.metoffice.gov.uk/public/data/'
@@ -40,10 +40,6 @@ def forecast_daily(loc):
     #Forecast for period
     data2 = data1['Period']
 
-    # Find variable names:
-
-    wx = 4
-
     val_array = np.chararray([11,32],itemsize=4)
     val_array[:] = '-9999'
 
@@ -71,12 +67,12 @@ def forecast_daily(loc):
                     val_array[vv,count]=str(data4[yy][var[vv]])
                 
         
-    return SiteRep
+    return val_array
 ##===========================================================================##
 
 def site_list():
     '''
-    This function gets a list of all the ID sites
+    This function gets a list of all the met office sites and returns information about them.
     '''
     ## Set the Datapoints web address:
     url='http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/sitelist?key='
@@ -97,14 +93,15 @@ def site_list():
 
 def get_loc_id(location):
     '''
-    This function will return a Met Office site ID for a given location. This is needed to get the correct 
+    This function takes the list of sites from site_list function and matches the names from the input file
+    to the site ID.
     '''
     sitelist = site_list()
 
-    for x in range(len(sitelist)):
+    for x in range(len(sitelist)):c
         if location == sitelist[x]['name']:
             site_id = sitelist[x]['id']
-    print site_id
+
     return site_id
 ##===========================================================================##
 
@@ -118,9 +115,10 @@ for line in open(in_file):
 location_list = location_list[2:]
 
 for location in location_list:
+    print location
     
     data = forecast_daily(location)
-    out_file = location+'_.csv'
+    out_file = 'data_files/'+location+'_data.csv'
 
     with open(out_file,'wb') as f:
         csv.writer(f).writerows(data)

@@ -1,13 +1,11 @@
-Name           Lat          Lon   
-
-Leeds        53.79          -1.54
-Edinburgh    55.95	    -3.19
-London       51.50           0.0
-Bristol      51.45          -2.58
-Glasgow      55.85          -4.25
-Cardiff      51.48          -3.18
-Manchester   53.46          -2.23
-Oxford       51.75          -1.25
-Exeter       51.71          -3.53
-Birmingham   52.48          -1.89
-Newcastle    54.96          -1.60
+Leeds 53.79 -1.54
+Edinburgh 55.95 -3.19
+London 51.50 0.0
+Bristol 51.45 -2.58
+Glasgow 55.85 -4.25
+Cardiff 51.48 -3.18
+Manchester 53.46 -2.23
+Oxford 51.75 -1.25
+Exeter 50.71 -3.53
+Birmingham 52.48 -1.89
+Newcastle 54.96 -1.60
